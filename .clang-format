@@ -1,0 +1,6 @@
+# Arquivo .clang-format
+BasedOnStyle: Google
+IndentWidth: 2
+TabWidth: 2
+ColumnLimit: 200
+UseTab: Never

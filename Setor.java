@@ -55,8 +55,8 @@ public abstract class Setor {
     }
   }
 
-  // IA ajudou na sintaxe
   public List<Inimigo> inimigosVivos() {
+    
     List<Inimigo> vivos = new ArrayList<Inimigo>();
     for (Inimigo i : inimigos) {
       if (i.estaVivo())

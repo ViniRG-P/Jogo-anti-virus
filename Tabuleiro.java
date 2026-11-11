@@ -156,9 +156,18 @@ private static String[] gerarTiposAleatorios(Random rnd) {
         sb.append(s.isVisitado() ? s.simbolo() : '?');
         
         for (int i = 0; i < 2; i++) {
-          boolean aqui = i < jogadores.size() && jogadores.get(i).estaVivo()
-              && jogadores.get(i).getPos().equals(s.getPos());
-          sb.append(aqui ? String.valueOf(i + 1) : " ");
+          boolean aqui = i < jogadores.size() && jogadores.get(i).estaVivo() && jogadores.get(i).getPos().equals(s.getPos());
+          String texto = String.valueOf(i+1);
+
+          if(!aqui){
+            sb.append(" ");
+          }
+          else if(i == 0){
+            sb.append(Cores.colorir(Cores.ANSI_RED, texto));
+          }
+          else{
+            sb.append(Cores.colorir(Cores.ANSI_BLUE, texto));
+          }
         }
       }
       sb.append("|\n");

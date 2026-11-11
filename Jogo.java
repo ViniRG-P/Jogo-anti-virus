@@ -41,7 +41,7 @@ public class Jogo {
     System.out.println("Legenda dos setores: N=normal O=oculto P=privado ?=não visitado");
 
     // Turno 0: P1 e depois P2 saem do setor inicial.
-    System.out.println("\n--- Turno 0: escolham uma porta do setor inicial ---");
+    System.out.println(Cores.colorir(Cores.ANSI_CYAN,"\n--- Turno 0: escolham uma porta do setor inicial ---"));
     for (Jogador j : jogadores) {
       System.out.println(tabuleiro.desenhar(jogadores));
       moverJogador(j);
@@ -51,7 +51,7 @@ public class Jogo {
 
     int ciclo = 1;
     while (vencedor == null && ciclo <= MAX_CICLOS && existeVivo()) {
-      System.out.println("\n---------- CICLO " + ciclo + "/" + MAX_CICLOS + " ----------");
+      System.out.println(Cores.colorir(Cores.ANSI_CYAN, "\n---------- CICLO " + ciclo + "/" + MAX_CICLOS + " ----------"));
       for (Jogador j : jogadores) {
         if (!j.estaVivo())
           continue;
